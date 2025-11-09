@@ -215,7 +215,7 @@ class VoiceAssistant:
             print(f"3. Try pulling the model: ollama pull {self.qwen_model}")
             return None
     
-    def synthesize_speech(self, text, output_path="output1.wav"):
+    def synthesize_speech(self, text, output_path="output/output1.wav"):
         """Convert text to speech and save to file"""
         print(f"\n[3/4] Synthesizing speech...")
         print(f"[TTS] Converting: '{text[:100]}{'...' if len(text) > 100 else ''}'")
@@ -323,7 +323,7 @@ $synth.Dispose()
             import os
             os.startfile(audio_path)
     
-    def run_pipeline(self, audio_path, output_path="output1.wav"):
+    def run_pipeline(self, audio_path, output_path="output/output1.wav"):
         """Run the complete voice assistant pipeline"""
         print("="*60)
         print("VOICE ASSISTANT PIPELINE")
